@@ -1,0 +1,59 @@
+.airbnb-plus {
+  padding: 65px 0 50px;
+
+  &__title {
+    @include section_title;
+  }
+
+  &__desc {
+    @include section_desc;
+  }
+
+  &__img-block {
+    background-image: url("../images/Rectangle1.png");
+    background-repeat: no-repeat;
+    min-height: 300px;
+    background-size: cover;
+
+    @include dflex(column, center, center);
+
+    > img {
+      margin-bottom: 30px;
+    }
+
+    > button {
+      background-color: $c-white;
+      border-radius: 4px;
+      color: $c-dark-grey;
+      border: none;
+      padding: 7px 28px;
+
+      @include dflex(row, center, center);
+
+      > span {
+        display: inline-block;
+        margin-right: 10px;
+        letter-spacing: 1px;
+        font-size: 10px;
+        line-height: 32px;
+        text-transform: uppercase;
+        color: $c-grey;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .airbnb-plus {
+    padding: 20px 0 50px;
+
+    &__title,
+    &__desc {
+      width: 100%;
+    }
+
+    &__img-block {
+      min-height: 375px;
+      background-position: center center;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "airnbnb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass assets/scss/main.scss assets/css/main.css",
+    "watch": "npm run build -- -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

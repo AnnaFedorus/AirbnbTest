@@ -1,0 +1,49 @@
+.card-aside {
+  width: 100%;
+  max-width: 290px;
+
+  > img {
+    width: 100%;
+    height: 209px;
+  }
+
+  &__content {
+    display: inline-block;
+    @include dflex(row, space-between, center);
+
+    &-box {
+      @include dflex(row, center, center);
+
+      &__title {
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: $c-black;
+        border: 1px solid $c-black;
+        border-radius: 4px;
+        margin: 14px 7px 7px 0;
+        padding: 5px 10px;
+        width: 100%;
+        max-width: 125px;
+      }
+
+      &__subtitle {
+        color: $c-grey;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &__stats {
+      font-size: 13px;
+      line-height: 18px;
+      color: $c-grey;
+
+      @include dflex(row, center, center);
+    }
+  }
+
+  &__desc {
+    @include section_title;
+  }
+}

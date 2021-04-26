@@ -1,0 +1,65 @@
+.airbnb-advanture {
+  padding-bottom: 60px;
+
+  &__title {
+    @include section_title;
+  }
+
+  &__desc {
+    @include section_desc;
+    @include dflex(row, flex-start, center);
+
+    margin-bottom: 60px;
+
+    > span {
+      max-width: 420px;
+      width: 100%;
+      margin-right: 25px;
+    }
+  }
+
+  &__items {
+    @include dflex(row, flex-start, flex-start, wrap);
+
+    .card {
+      margin: 0 20px 24px 0;
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+
+      &:nth-last-of-type(-n + 4) {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .airbnb-advanture {
+    padding-bottom: 40px;
+    &__title {
+      width: 100%;
+    }
+
+    &__desc {
+      width: 100%;
+      margin-bottom: 25px;
+      > svg {
+        display: none;
+      }
+    }
+
+    &__items {
+      display: block;
+
+      .card {
+        margin-right: 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.airbnb-house {
+  &__title {
+    @include section_title;
+    margin-bottom: 23px;
+  }
+
+  &__items {
+    @include dflex(row, flex-start, flex-start, wrap);
+    margin-bottom: 42px;
+
+    .card-aside {
+      margin: 0 19px 0 0;
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .airbnb-house {
+    &__title {
+      width: 100%;
+
+      > svg {
+        display: none;
+      }
+    }
+    &__items {
+      margin-bottom: 50px;
+      .card-aside {
+        margin-right: 0;
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
